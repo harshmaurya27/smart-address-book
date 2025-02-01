@@ -4,7 +4,7 @@ A web application for managing addresses efficiently. It allows users to store, 
 
 ## 🛠 Tech Stack
 
-- **Frontend**: React.js, TailwindCSS
+- **Frontend**: React.js, CSS
 - **Backend**: Node.js, Express.js
 - **Database**: MongoDB
 
