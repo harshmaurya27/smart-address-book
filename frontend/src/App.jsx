@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import "./App.css";
 
 const App = () => {
+  const backendUrl = "https://smart-address-book-2q7z.onrender.com";
   const [addressList, setAddressList] = useState([]);
   const [searchQuery, setSearchQuery] = useState("");
   const [currentPage, setCurrentPage] = useState(1);
@@ -13,7 +14,7 @@ const App = () => {
   const fetchAddressList = async () => {
     try {
       const response = await fetch(
-        `http://localhost:5000/api/address/get?page=${currentPage}&limit=${limit}&search=${searchQuery}`
+        `${backendUrl}/api/address/get?page=${currentPage}&limit=${limit}&search=${searchQuery}`
       );
 
       if (!response.ok)
@@ -39,8 +40,12 @@ const App = () => {
     <main>
       <h1>Add your address</h1>
       <div className="add-address">
-        <AddressForm fetchAddressList={fetchAddressList} />
+        <AddressForm
+          backendUrl={backendUrl}
+          fetchAddressList={fetchAddressList}
+        />
         <AddressTable
+          backendUrl={backendUrl}
           fetchAddressList={fetchAddressList}
           addressList={addressList}
           searchQuery={searchQuery}
