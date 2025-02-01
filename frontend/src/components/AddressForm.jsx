@@ -1,6 +1,11 @@
 import { useState } from "react";
 
-const AddressForm = ({ addressList, setAddressList, fetchAddressList }) => {
+const AddressForm = ({
+  addressList,
+  setAddressList,
+  fetchAddressList,
+  backendUrl,
+}) => {
   const [formData, setFormData] = useState({
     addressLine1: "",
     city: "",
@@ -83,7 +88,7 @@ const AddressForm = ({ addressList, setAddressList, fetchAddressList }) => {
 
     // Send data to backend
     try {
-      const response = await fetch("http://localhost:5000/api/address/add", {
+      const response = await fetch(`${backendUrl}/api/address/add`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

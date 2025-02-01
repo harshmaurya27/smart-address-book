@@ -8,6 +8,7 @@ const AddressTable = ({
   currentPage,
   setCurrentPage,
   totalPages,
+  backendUrl,
 }) => {
   // Edit state
   const [editingRowId, setEditingRowId] = useState(null);
@@ -30,7 +31,7 @@ const AddressTable = ({
   const saveEdit = async () => {
     try {
       const response = await fetch(
-        `http://localhost:5000/api/address/edit/${editingRowAddressData._id}`,
+        `${backendUrl}/api/address/edit/${editingRowAddressData._id}`,
         {
           method: "PUT",
           headers: { "Content-Type": "application/json" },
@@ -51,10 +52,9 @@ const AddressTable = ({
 
   const deleteAddress = async (id) => {
     try {
-      const response = await fetch(
-        `http://localhost:5000/api/address/delete/${id}`,
-        { method: "DELETE" }
-      );
+      const response = await fetch(`${backendUrl}/api/address/delete/${id}`, {
+        method: "DELETE",
+      });
 
       if (response.ok) {
         fetchAddressList();

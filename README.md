@@ -80,3 +80,10 @@ PostPincode API (India):`https://api.postalpincode.in/pincode/${pincode}`
 
 
 ```
+
+# live link
+
+```sh
+frontend: https://smartaddressbook1.netlify.app/
+backend:https://smart-address-book-2q7z.onrender.com
+```
