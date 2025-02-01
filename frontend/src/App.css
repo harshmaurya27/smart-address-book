@@ -1,0 +1,127 @@
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,300;1,400&family=Nunito:wght@300;400;600;700;800;900&family=Russo+One&family=Spartan:wght@700;800;900&display=swap");
+
+body {
+  font-family: "Nunito", sans-serif;
+  margin: 0 32px;
+}
+
+main {
+  max-width: 900px;
+  margin-inline: auto;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.add-address {
+  display: flex;
+  gap: 32px;
+}
+
+.address-form {
+  width: 100%;
+}
+.input-container {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 16px;
+  position: relative;
+}
+.error {
+  font-size: 12px;
+  color: red;
+  margin: 0;
+  position: absolute;
+  top: 100%;
+}
+
+.input-container label {
+  font-size: 14px;
+}
+
+.input-container input {
+  height: 28px;
+  font-family: inherit;
+}
+#querySerach {
+  height: 28px;
+  font-family: inherit;
+}
+#country {
+  height: 28px;
+  font: inherit;
+}
+#add-btn {
+  width: 100%;
+  height: 32px;
+  font-size: 18px;
+  font-family: inherit;
+  margin-top: 8px;
+}
+.address-table {
+  width: 100%;
+  border-collapse: collapse;
+  align-self: start;
+  margin-top: 5px;
+  margin-bottom: 40px;
+}
+.address-column span {
+  margin-right: 6px;
+}
+.address-table th,
+.address-table td {
+  border: 1px solid #444;
+  text-align: left;
+  padding: 4px 8px;
+}
+
+#bottomRow td button {
+  width: 64px;
+  padding: 4px;
+  border-radius: 4px;
+  margin-inline: 4px;
+  box-shadow: 4px 2px;
+  cursor: pointer;
+}
+#dataRow td button {
+  width: 64px;
+  padding: 4px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+@media (max-width: 900px) {
+  body {
+    margin-inline: 16px;
+  }
+
+  .add-address {
+    flex-direction: column;
+  }
+}
+@media (max-width: 512px) {
+  #dataRow {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  #dataRow td:first-child {
+    background-color: #b2b1b8;
+  }
+  #headingRow {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  #headingRow th:first-child {
+    background-color: #b2b1b8;
+  }
+  #headingRow th {
+    min-width: 280px;
+  }
+  #dataRow td {
+    min-width: 280px;
+  }
+  #bottomRow {
+    max-width: 280px;
+  }
+}
