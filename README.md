@@ -36,7 +36,7 @@ Ensure you have the following installed:
 ### **1. Clone the Repository**
 
 ```sh
-git clone https://github.com/yourusername/smart-address-book.git
+git clone https://github.com/harshmaurya27/smart-address-book
 cd smart-address-book
 ```
 
